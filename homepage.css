@@ -218,12 +218,12 @@ body, html {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 :root {
-  --first-color: #33673b; /* Dockside green */
-  --title-color: #052a4f; /* Dockside deep blue */
+  --first-color: #33673b; 
+  --title-color: #052a4f; 
   --text-color: #444;
   --body-color: #f4f4f4;
   --container-color: #ffffff;
-  --accent-color: #ffbb00; /* Yellow accent */
+  --accent-color: #ffbb00; 
 
   --body-font:'Merriweather', serif;
   --h2-font-size: 1.5rem;
