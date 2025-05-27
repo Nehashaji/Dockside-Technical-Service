@@ -12,18 +12,32 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar" data-aos="fade-down" data-aos-delay="100">
-    <div class="container">
-      <img src="Images/logo.png" alt="Dockside Logo" class="logo" />
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="AboutusPage.html">About Us</a>
-        <a href="ServicesPage.html">Our Services</a>
-        <a href="#">Contact Us</a>
-      </nav>
+<!-- Navbar -->
+<header class="navbar" data-aos="fade-down" data-aos-delay="100">
+  <div class="container">
+    <img src="Images/logo.png" alt="Dockside Logo" class="logo" />
+    
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="AboutusPage.html">About Us</a>
+      <a href="ServicesPage.html">Our Services</a>
+      <a href="ContactusPage.html">Contact Us</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </header>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#">Home</a>
+    <a href="AboutusPage.html">About Us</a>
+    <a href="ServicesPage.html">Our Services</a>
+    <a href="ContactusPage.html">Contact Us</a>
+  </div>
+</header>
 
 <!-- Contact Header -->
 <section class="contact-hero">
@@ -123,6 +137,20 @@
   </div>
 </footer>
 
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('menuOverlay');
+
+  function toggleMenu() {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('show');
+    overlay.classList.toggle('show');
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+</script>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

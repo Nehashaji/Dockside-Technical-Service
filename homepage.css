@@ -5,6 +5,7 @@ body, html {
   font-family: 'Merriweather', serif;
   background-color: #000018;
   color: white;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -32,6 +33,7 @@ body, html {
 
 .logo {
   height: 80px;
+  transition: height 0.3s ease;
 }
 
 /* Nav Links */
@@ -71,6 +73,7 @@ body, html {
   flex-direction: column;
   cursor: pointer;
   z-index: 1001;
+  margin-right: 10px; 
 }
 
 .hamburger span {
@@ -156,9 +159,17 @@ body, html {
 
   .hamburger {
     display: flex;
+    margin-right: 1px; 
+  }
+
+  .logo {
+    height: 60px; 
+  }
+
+  .container {
+    padding: 10px 20px;
   }
 }
-
 
 /* Hero Section */
 .hero {
@@ -173,11 +184,13 @@ body, html {
 .hero-overlay {
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 80px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
 .hero-content {
@@ -187,8 +200,9 @@ body, html {
 
 .hero-content h1 {
   font-size: 40px;
-  line-height: 1.8;
+  line-height: 1.6;
   margin-bottom: 30px;
+  color: #ffffff;
 }
 
 .green-text {
@@ -234,6 +248,53 @@ body, html {
 
 [data-aos].aos-animate {
   opacity: 1;
+}
+
+/* Responsive Hero Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-overlay {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-content {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .subtext {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .subtext {
+    font-size: 15px;
+  }
+
+  .cta-button {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
 }
 
 /* Welcome Section */
